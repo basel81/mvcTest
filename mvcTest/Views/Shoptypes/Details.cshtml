@@ -1,0 +1,54 @@
+﻿@model mvcTest.Models.Shoptype
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Shoptype</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ename)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ename)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aliases)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aliases)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ealiases)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ealiases)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Category.CategoryEname)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ShopTypeId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

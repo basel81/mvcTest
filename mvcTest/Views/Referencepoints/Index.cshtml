@@ -1,0 +1,47 @@
+﻿@model IEnumerable<mvcTest.Models.Referencepoint>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ReferencePointId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ReferencePointId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ReferencePointId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

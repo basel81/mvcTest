@@ -1,0 +1,131 @@
+﻿@model IEnumerable<mvcTest.Models.Shop>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Shops Management</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShopName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EshopName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Properties)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facebook)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Twiter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegisterationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActivationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferencePoint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShopType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShopName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EshopName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Properties)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facebook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Twiter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegisterationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActivationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferencePoint.AName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShopType.Aliases)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ShopId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ShopId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ShopId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
